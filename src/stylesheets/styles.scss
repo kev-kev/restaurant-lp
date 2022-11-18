@@ -13,12 +13,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  animation: fadeInAnimation ease 3s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
 .main-content-block {
   border: 3px solid black;
   height: 20rem;
@@ -37,13 +31,14 @@ body {
 
 .nav-container {
   position: absolute;
-  width: auto;
-  // margin: 20px;
+  width: 80%;
   align-self: flex-end;
 }
 
 .nav {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   overflow: hidden;
   background-color: #333;
   a {
@@ -61,6 +56,6 @@ body {
   }
 }
 
-#menu {
-  // scroll-margin-top: 20px; //mobile only?
+.topnav-text {
+  color: white;
 }
