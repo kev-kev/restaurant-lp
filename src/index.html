@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Static Site Boilerplate</title>
     <meta name="description" content="" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <header>
-        <img src="images/header.png" height="300px" />
-        <nav>
-            <a href="/">Reservations</a> |
-            <a href="/">Menu</a> |
-            <a href="/">About</a> |
-            <a href="/">Contact</a>
-          </nav>
+        <div class="header-background-image">
+            <div class="nav-container">
+                <nav class="nav">
+                    <a href="#reservations">Reservations</a>
+                    <a href="#menu">Menu</a>
+                    <h1>Restaurant LP</h1>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                  </nav>
+            </div>
+        </div>
     </header>
     <main>
         <div id="reservations" class="main-content-block" data-aos="zoom-in">
-            <h1>Reservations</h1>
+            <h2>Reservations</h2>
         </div>
         <div id="menu" class="main-content-block" data-aos="zoom-in">
-            <h1>Menu</h1>
+            <h2>Menu</h2>
         </div>
         <div id="about" class="main-content-block" data-aos="zoom-in">
-            <h1>About</h1>
+            <h2>About</h2>
         </div>
         <div id="contact" class="main-content-block" data-aos="zoom-in">
-            <h1>Contact</h1>
+            <h2>Contact</h2>
         </div>
     </main>
-    
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();
