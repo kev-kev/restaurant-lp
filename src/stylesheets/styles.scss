@@ -37,13 +37,13 @@ html {
   justify-content: center;
 }
 
-.nav-container {
+.navbar-container {
   position: absolute;
   width: 80%;
   align-self: flex-end;
 }
 
-.nav {
+.navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -72,4 +72,9 @@ html {
 .vertical-line {
   border-left: 1px solid white;
   height: 50px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
 }
