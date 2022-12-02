@@ -18,13 +18,13 @@ h1 {
   font-family: Baskervville, Garamond, "Times New Roman";
 }
 
-a {
+a, button {
   font-family: Helvetica, Arial, sans-serif;
 }
 
 .header {
   background-color: #9D5126;
-  color: white;
+  color: rgba(255, 255, 255, 0.82);
   a, a:hover {
     text-decoration: none;
     color: inherit;
@@ -34,11 +34,13 @@ a {
 .navbar {
   width: 100%;
   text-align: center;
+  padding-top: 1rem;
 }
 
 .vertical-line {
-  border-left: 1px solid rgb(0, 0, 0);
-  height: 1.5rem;
+  border-left: 2px solid white;
+  // height: 1rem;
+  padding-left: .25rem;
 }
 
 .title-resBtn-container {
@@ -50,11 +52,26 @@ a {
     grid-column-start: 2;
     text-align: center;
     display: inline;
+    font-size: 54px;
+    margin: .5rem;
   }
 
   button {
-    width: 150px;
-    margin-right: 10px;
+    background-color: #4e4b5c;
+    width: 8rem;
+    margin-right: 1rem;
     justify-self: flex-end;
+    border: none;
+    padding: 1rem .5rem;
+    text-align: center;
+    text-decoration: none;
+    font-size: .9rem;
+    color: rgba(255, 255, 255, 0.83);
+    transition-duration: 0.4s;
+    cursor: pointer;
   }
+}
+
+.main-content-block {
+  height: 300px;
 }
