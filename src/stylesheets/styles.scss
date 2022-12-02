@@ -1,7 +1,5 @@
 // Load CSS Reset from NPM
 @import "~normalize.css";
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
 
 @keyframes fadeInAnimation {
   0% {
@@ -59,8 +57,4 @@ a {
     margin-right: 10px;
     justify-self: flex-end;
   }
-}
-
-.slideshow-img {
-  width: 90%;
 }

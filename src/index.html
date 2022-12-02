@@ -5,6 +5,8 @@
     <title>Static Site Boilerplate</title>
     <meta name="description" content="" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css" />
+
     <link href="https://fonts.googleapis.com/css?family=Baskervville" rel="stylesheet" />
 </head>
 <body>
@@ -26,10 +28,10 @@
         </div>
     </header>
     <main>
-        <div class="slideshow">
-            <img src="./images/pizza.jpg" class="slideshow-img" />
-            <img src="./images/restaurant.jpg" class="slideshow-img" />
-            <img src="./images/spaghetti.jpg" class="slideshow-img" />
+        <div class="owl-carousel owl-theme">
+            <img src="./images/pizza.jpg" class="item" />
+            <img src="./images/restaurant.jpg" class="item" />
+            <img src="./images/spaghetti.jpg" class="item" />
         </div>
         <div id="about" class="main-content-block" data-aos="fade-zoom-in" data-aos-easing="ease-in-out-sine" data-aos-delay="300" data-aos-offset="200" data-aos-duration="500">
             <h2>About Us</h2>

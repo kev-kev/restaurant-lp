@@ -3,6 +3,7 @@ const path = require('path');
 const config = require('./site.config');
 const loaders = require('./webpack.loaders');
 const plugins = require('./webpack.plugins');
+const webpack = require('webpack');
 
 module.exports = {
   context: path.join(config.root, config.paths.src),
@@ -31,5 +32,12 @@ module.exports = {
   module: {
     rules: loaders,
   },
-  plugins,
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    }),
+    ...plugins,
+  ],
 };

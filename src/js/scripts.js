@@ -1,20 +1,17 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
-import $ from 'jquery';
-import 'slick-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
 
 
 AOS.init();
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   document.getElementsByClassName('slideshow')[0].slick({
-//     autoplay: true,
-//   })
-// })
-
-$(document).ready(() => {
-  console.log("hello");
-  $('.slideshow').slick({
-    autoplay: true
+$(() => {
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    items: 1,
+    animateOut: 'fadeOut',
+    autoplay: true,
+    autoplayTimeout: 3000
   })
 });
