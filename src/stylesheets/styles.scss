@@ -58,7 +58,6 @@ a, button {
 }
 
 .title-resBtn {
-  background-color: #4e4b5c;
   width: 8rem;
   margin-right: 1rem;
   justify-self: flex-end;
@@ -69,10 +68,10 @@ a, button {
   font-size: .9rem;
   color: rgba(255, 255, 255, 0.83);
   cursor: pointer;
-  transition: background-color 0.4s;
   &:hover {
-    background-color: #837ba5;
+    background-color: #837ba5 !important;
   }
+  transition: background-color 0.4s;
 }
 
 .main-content-container {
@@ -87,4 +86,8 @@ a, button {
 
 .carousel-placeholder {
   height: 80vh;
+}
+
+.carousel-container {
+  padding: 1rem;
 }
