@@ -13,7 +13,8 @@ $(() => {
     items: 1,
     animateOut: 'fadeOut',
     autoplay: true,
-    autoplayTimeout: 3000
+    autoplayTimeout: 3000,
+    dots: false
   })
   AOS.init();
 });

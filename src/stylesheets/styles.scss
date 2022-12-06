@@ -10,24 +10,32 @@
   }
 }
 
+$header-bg: #76323f;
+$header-font-color: #d7cec7;
+$dark: #545454;
+$light: #656565;
+$bg-color: #d7cec7;
+$font-color: #76323f;
+
 html {
   scroll-behavior: smooth;
+  font-family: Tajawal;
 }
 
 h1 {
-  font-family: Baskervville, Garamond, "Times New Roman";
-}
-
-a, button {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Playfair Display", Garamond, "Times New Roman";
 }
 
 .header {
-  background-color: #9D5126;
-  color: rgba(255, 255, 255, 0.82);
-  a, a:hover {
+  background-color: $header-bg;
+  color: $header-font-color;
+  a {
+    color: $header-font-color;
     text-decoration: none;
-    color: inherit;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
 }
 
@@ -53,8 +61,8 @@ a, button {
   grid-column-start: 2;
   text-align: center;
   display: inline;
-  font-size: 54px;
-  margin: .5rem;
+  font-size: 60px;
+  margin: 0 0 0.5rem 0;
 }
 
 .title-resBtn {
@@ -62,14 +70,13 @@ a, button {
   margin-right: 1rem;
   justify-self: flex-end;
   border: none;
-  padding: 1rem .5rem;
-  text-align: center;
+  padding: 1rem .5rem .5rem;
   text-decoration: none;
-  font-size: .9rem;
   color: rgba(255, 255, 255, 0.83);
   cursor: pointer;
+  font-weight: bolder;
   &:hover {
-    background-color: #837ba5 !important;
+    background-color: $light !important;
   }
   transition: background-color 0.4s;
 }
@@ -78,6 +85,10 @@ a, button {
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: $bg-color;
+  color: $font-color;
+  padding: 1rem;
+  text-align: center;
 }
 
 .main-content-block {
@@ -85,9 +96,9 @@ a, button {
 }
 
 .carousel-placeholder {
-  height: 80vh;
+  height: 100vh;
 }
 
-.carousel-container {
-  padding: 1rem;
+.carousel-img {
+  height: 100vh;
 }
