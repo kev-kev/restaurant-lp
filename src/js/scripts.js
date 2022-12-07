@@ -8,6 +8,7 @@ $(() => {
     console.log()
     $('.carousel-placeholder').hide();
   })
+
   $('.owl-carousel').owlCarousel({
     loop: true,
     items: 1,
@@ -16,6 +17,7 @@ $(() => {
     autoplayTimeout: 3000,
     dots: false
   })
+
   AOS.init();
 });
 

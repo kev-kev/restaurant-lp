@@ -113,12 +113,17 @@ h1 {
 .menu-grid-container {
   height: 500px;
   display: grid;
-  grid-template: repeat(3, 1fr) / 1fr 1fr;
+  grid-template: repeat(4, 1fr) / 1fr 1fr;
+  // width: 100%;
 }
 
 .menu-grid-item {
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 1rem 0rem;
+  h2 {
+    margin-bottom: .5rem;
+  }
+  p {
+    font-style: italic;
+    margin: 0;
+  }
 }
