@@ -26,6 +26,20 @@ h1 {
   font-family: "Playfair Display", Garamond, "Times New Roman";
 }
 
+.btn {
+  width: 8rem;
+  border: none;
+  padding: 1rem .5rem .5rem;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.83);
+  cursor: pointer;
+  font-weight: bolder;
+  &:hover {
+    background-color: $light !important;
+  }
+  transition: background-color 0.4s;
+}
+
 .header {
   background-color: $header-bg;
   color: $header-font-color;
@@ -47,7 +61,6 @@ h1 {
 
 .vertical-line {
   border-left: 2px solid white;
-  // height: 1rem;
   padding-left: .25rem;
 }
 
@@ -66,25 +79,11 @@ h1 {
 }
 
 .title-resBtn {
-  width: 8rem;
   margin-right: 1rem;
   justify-self: flex-end;
-  border: none;
-  padding: 1rem .5rem .5rem;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.83);
-  cursor: pointer;
-  font-weight: bolder;
-  &:hover {
-    background-color: $light !important;
-  }
-  transition: background-color 0.4s;
 }
 
 .main-content-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
   background-color: $bg-color;
   color: $font-color;
   padding: 1rem;
@@ -102,11 +101,7 @@ h1 {
   height: 100vh;
 }
 
-.carousel-img {
-
-}
-
-.menu-button-container {
+.menu-btn-container {
   margin-bottom: 1rem;
 }
 
@@ -114,7 +109,6 @@ h1 {
   height: 500px;
   display: grid;
   grid-template: repeat(4, 1fr) / 1fr 1fr;
-  // width: 100%;
 }
 
 .menu-grid-item {
