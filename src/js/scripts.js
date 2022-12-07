@@ -23,12 +23,12 @@ $(() => {
   AOS.init();
 });
 
-// $('.menu-btn').on('click', (e) => {
-//   $('.menu-grid-container').hide();
-//   if(e.target.id === 'lunch-menu-btn'){
-//     $('#lunch-menu-container').show();
-//   } else {
-//     $('#dinner-menu-container').show();
-//   }
-// })
+$('.menu-btn').on('click', (e) => {
+  $('.menu-grid-container').hide();
+  if(e.target.id === 'lunch-menu-btn'){
+    $('#lunch-menu-container').show();
+  } else {
+    $('#dinner-menu-container').show();
+  }
+})
 
