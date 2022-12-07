@@ -3,6 +3,9 @@ import 'aos/dist/aos.css';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 
+const LUNCH_MENU_ITEMS = 8;
+const DINNER_MENU_ITEMS = 8;
+
 $(() => {
   $('.owl-carousel').on('initialized.owl.carousel', () => {
     console.log()
@@ -20,6 +23,7 @@ $(() => {
 
   $('#dinner-menu-container').hide();
   // $('.drink-menu').hide();
+  createMenuItems();
   AOS.init();
 });
 
@@ -32,3 +36,22 @@ $('.menu-btn').on('click', (e) => {
   }
 })
 
+const createMenuItems = () => {
+  for(let i = 0; i < LUNCH_MENU_ITEMS; i++){
+    $('#lunch-menu-container').append(`
+      <div class="menu-grid-item">
+        <h2>Lunch Item</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>
+    `)
+  }
+  for(let i = 0; i < DINNER_MENU_ITEMS; i++){
+    $('#dinner-menu-container').append(`
+      <div class="menu-grid-item">
+        <h2>Dinner Item</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>
+    `)
+  }
+
+}
