@@ -92,13 +92,33 @@ h1 {
 }
 
 .main-content-block {
-  height: 300px;
+  width: 100%;
 }
 
+.owl-carousel {
+  background-color: $bg-color;
+}
 .carousel-placeholder {
   height: 100vh;
 }
 
 .carousel-img {
-  height: 100vh;
+
+}
+
+.menu-button-container {
+  margin-bottom: 1rem;
+}
+
+.menu-grid-container {
+  height: 500px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / 1fr 1fr;
+}
+
+.menu-grid-item {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
