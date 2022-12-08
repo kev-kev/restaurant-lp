@@ -118,13 +118,13 @@ h1 {
   grid-template: repeat(4, 1fr) / 1fr 1fr;
 }
 
-.menu-grid-item {
+.menu-content-container{
   margin: 1rem 0rem;
   h2 {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
   p {
     font-style: italic;
-    margin: 0;
+    margin: 0 0 1rem;
   }
 }

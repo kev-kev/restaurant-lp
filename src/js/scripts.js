@@ -5,6 +5,7 @@ import 'owl.carousel';
 
 const LUNCH_MENU_ITEMS = 8;
 const DINNER_MENU_ITEMS = 8;
+const DRINK_MENU_ITEMS = 8;
 
 $(() => {
   $('.owl-carousel').on('initialized.owl.carousel', () => {
@@ -21,18 +22,21 @@ $(() => {
     dots: false
   })
 
-  $('#dinner-menu-container').hide();
-  // $('.drink-menu').hide();
-  createMenuItems();
   AOS.init();
 });
 
 $('.menu-btn').on('click', (e) => {
   $('.menu-grid-container').hide();
-  if(e.target.id === 'lunch-menu-btn'){
-    $('#lunch-menu-container').show();
-  } else {
-    $('#dinner-menu-container').show();
+  switch(e.target.id){
+    case 'lunch-menu-btn':
+      $('#lunch-menu-container').show();
+      break;
+    case 'dinner-menu-btn':
+      $('#dinner-menu-container').show();
+      break;
+    case 'drink-menu-btn':
+      $('#drink-menu-container').show();
+      break;
   }
 })
 
@@ -53,5 +57,16 @@ const createMenuItems = () => {
       </div>
     `)
   }
-
+  for(let i = 0; i < DRINK_MENU_ITEMS; i++){
+    $('#drink-menu-container').append(`
+      <div class="menu-list-item">
+        <h2>Drink Item</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>
+    `)
+  }
 }
+
+createMenuItems();
+$('#dinner-menu-container').hide();
+$('#drink-menu-container').hide();
