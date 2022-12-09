@@ -5,7 +5,7 @@ import 'owl.carousel';
 
 const LUNCH_MENU_ITEMS = 8;
 const DINNER_MENU_ITEMS = 8;
-const DRINK_MENU_ITEMS = 8;
+const DRINK_MENU_ITEMS = 6;
 
 $(() => {
   $('.owl-carousel').on('initialized.owl.carousel', () => {
@@ -27,6 +27,7 @@ $(() => {
 
 $('.menu-btn').on('click', (e) => {
   $('.menu-grid-container').hide();
+  $('.menu-list-container').hide();
   switch(e.target.id){
     case 'lunch-menu-btn':
       $('#lunch-menu-container').show();

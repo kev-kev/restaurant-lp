@@ -64,10 +64,23 @@ h1 {
   padding-left: .25rem;
 }
 
-.title-resBtn-container {
+.header-grid-container {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
+}
+
+.social-media-btns-container {
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 2rem;
+  color: $header-font-color;
+  i {
+    font-size: 32px;
+    padding-right: 1.5rem;
+  }
 }
 
 .title {
@@ -79,7 +92,7 @@ h1 {
 }
 
 .title-resBtn {
-  margin-right: 1rem;
+  margin-right: 2rem;
   justify-self: flex-end;
 }
 
@@ -92,6 +105,13 @@ h1 {
 
 .main-content-block {
   width: 100%;
+  p {
+    line-height: 1.4rem;
+  }
+}
+
+.main-content-title {
+
 }
 
 .divider {
@@ -109,22 +129,29 @@ h1 {
 }
 
 .menu-btn-container {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .menu-grid-container {
-  height: 500px;
+  height: 25rem;
   display: grid;
   grid-template: repeat(4, 1fr) / 1fr 1fr;
+  background:linear-gradient($font-color, $font-color) center 100% no-repeat; // draws line through center of element
+  background-size: 1px; // sets line size to 1px
 }
 
-.menu-content-container{
+.menu-container {
   margin: 1rem 0rem;
   h2 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
   }
   p {
     font-style: italic;
     margin: 0 0 1rem;
   }
+}
+
+.menu-subtitle {
+  text-decoration: underline 1px;
+  text-underline-offset: 4px;
 }
