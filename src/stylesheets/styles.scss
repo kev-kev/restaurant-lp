@@ -22,6 +22,10 @@ html {
   font-family: Tajawal;
 }
 
+main {
+  background-color: $bg-color;
+}
+
 h1 {
   font-family: "Playfair Display", Garamond, "Times New Roman";
 }
@@ -40,7 +44,7 @@ h1 {
   transition: background-color 0.4s;
 }
 
-.header {
+header {
   background-color: $header-bg;
   color: $header-font-color;
   a {
@@ -83,7 +87,7 @@ h1 {
   }
 }
 
-.title {
+.header-title {
   grid-column-start: 2;
   text-align: center;
   display: inline;
@@ -91,16 +95,16 @@ h1 {
   margin: 0 0 0.5rem 0;
 }
 
-.title-resBtn {
+.header-resBtn {
   margin-right: 2rem;
   justify-self: flex-end;
 }
 
 .main-content-container {
-  background-color: $bg-color;
   color: $font-color;
   padding: 1rem;
   text-align: center;
+  margin: 0 5rem;
 }
 
 .main-content-block {
@@ -111,37 +115,42 @@ h1 {
 }
 
 .main-content-title {
-
+  font-size: 2.2rem;
 }
 
 .divider {
   border: none;
-  background-color: #76323f45;
-  height: 1px;
+  background-color: $bg-color;
+  border-top: medium double #76323f51;
   margin: 3rem 15rem;
+  overflow: visible; /* For IE */
+  padding: 0;
+  text-align: center;
 }
 
-.owl-carousel {
-  background-color: $bg-color;
+.divider:after { // styles the § char
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.7rem;
+  font-size: 1.5rem;
+  padding: 0 0.25rem;
+  background: $bg-color;
 }
+
 .carousel-placeholder {
   height: 100vh;
 }
 
-.menu-btn-container {
-  margin-bottom: 2rem;
-}
-
 .menu-grid-container {
-  height: 25rem;
   display: grid;
-  grid-template: repeat(4, 1fr) / 1fr 1fr;
+  grid-template: repeat(4, 1fr) 1rem / 1fr 1fr; // adding extra row to extend the dividing line
   background:linear-gradient($font-color, $font-color) center 100% no-repeat; // draws line through center of element
   background-size: 1px; // sets line size to 1px
 }
 
 .menu-container {
-  margin: 1rem 0rem;
+  margin: 2rem 0rem 5rem;
   h2 {
     margin-bottom: 0.2rem;
   }
@@ -151,7 +160,20 @@ h1 {
   }
 }
 
+.menu-subtitle-grid {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr
+}
+
 .menu-subtitle {
   text-decoration: underline 1px;
   text-underline-offset: 4px;
+  font-size: 1.8rem;
+}
+
+.menu-list-item, .menu-grid-item {
+  h2 {
+    font-size: 1.3rem;
+    font-style: italic;
+  }
 }

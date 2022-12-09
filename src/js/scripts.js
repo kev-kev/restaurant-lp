@@ -28,11 +28,14 @@ $(() => {
 $('.menu-btn').on('click', (e) => {
   $('.menu-grid-container').hide();
   $('.menu-list-container').hide();
+  $('.menu-subtitle-grid').hide();
   switch(e.target.id){
     case 'lunch-menu-btn':
+      $('.menu-subtitle-grid').show();
       $('#lunch-menu-container').show();
       break;
     case 'dinner-menu-btn':
+      $('.menu-subtitle-grid').show();
       $('#dinner-menu-container').show();
       break;
     case 'drink-menu-btn':
@@ -46,7 +49,7 @@ const createMenuItems = () => {
     $('#lunch-menu-container').append(`
       <div class="menu-grid-item">
         <h2>Lunch Item</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
     `)
   }
@@ -54,7 +57,7 @@ const createMenuItems = () => {
     $('#dinner-menu-container').append(`
       <div class="menu-grid-item">
         <h2>Dinner Item</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
     `)
   }
@@ -62,7 +65,7 @@ const createMenuItems = () => {
     $('#drink-menu-container').append(`
       <div class="menu-list-item">
         <h2>Drink Item</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
     `)
   }
