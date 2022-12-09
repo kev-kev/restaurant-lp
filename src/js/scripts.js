@@ -19,7 +19,9 @@ $(() => {
     animateOut: 'fadeOut',
     autoplay: true,
     autoplayTimeout: 3000,
-    dots: false
+    dots: false,
+    touchDrag: false,
+    mouseDrag: false,
   })
 
   AOS.init();
