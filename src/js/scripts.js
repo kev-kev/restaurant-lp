@@ -2,6 +2,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
+import MicroModal from 'micromodal';
 
 const LUNCH_MENU_ITEMS = 8;
 const DINNER_MENU_ITEMS = 8;
@@ -76,3 +77,4 @@ const createMenuItems = () => {
 createMenuItems();
 $('#dinner-menu-container').hide();
 $('#drink-menu-container').hide();
+MicroModal.init();

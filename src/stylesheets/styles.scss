@@ -1,5 +1,6 @@
 // Load CSS Reset from NPM
 @import "~normalize.css";
+@import "./modal.css";
 
 @keyframes fadeInAnimation {
   0% {
@@ -22,7 +23,7 @@ html {
   font-family: Tajawal;
 }
 
-main {
+.main {
   background-color: $bg-color;
 }
 
@@ -44,7 +45,7 @@ h1 {
   transition: background-color 0.4s;
 }
 
-header {
+.header {
   background-color: $header-bg;
   color: $header-font-color;
   a {
@@ -104,13 +105,13 @@ header {
   color: $font-color;
   padding: 1rem;
   text-align: center;
-  margin: 0 5rem;
+  margin: 0 11rem;
 }
 
 .main-content-block {
   width: 100%;
   p {
-    line-height: 1.4rem;
+    line-height: 1.6rem;
   }
 }
 
@@ -122,13 +123,12 @@ header {
   border: none;
   background-color: $bg-color;
   border-top: medium double #76323f51;
-  margin: 3rem 15rem;
+  margin: 3rem 2rem;
   overflow: visible; /* For IE */
-  padding: 0;
   text-align: center;
 }
 
-.divider:after { // styles the § char
+.divider:after { // adds and styles the § char
   content: "§";
   display: inline-block;
   position: relative;
