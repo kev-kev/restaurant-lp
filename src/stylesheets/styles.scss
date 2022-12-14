@@ -19,6 +19,10 @@ $bg-color: #d7cec7;
 $font-color: #76323f;
 $border-color: #76323f51;
 
+$mediaWidthBp1: 1260px;
+$mediaWidthBp2: 960px;
+$mediaWidthBp3: 840px;
+
 html {
   scroll-behavior: smooth;
   font-family: Tajawal;
@@ -149,7 +153,7 @@ a {
 
 .menu-grid-container {
   display: grid;
-  grid-template: repeat(4, 1fr) 1rem / 1fr 1fr; // adding extra row to extend the dividing line
+  grid-template: repeat(4, minmax(0, 1fr)) 1rem / repeat(2, minmax(0, 1fr)) ; // adding extra row to extend the dividing line
   background:linear-gradient($border-color, $border-color) center 100% no-repeat; // draws line through center of element
   background-size: 2px; // sets line size to 1px
 }
@@ -189,7 +193,10 @@ a {
 
 .footer {
   background-color: $bg-color;
-  padding: 5rem;
+  padding: 1rem 11rem;
+  @media (max-width: $mediaWidthBp1) {
+    padding: 1rem 2rem;
+  }
   margin: 0;
   h2 {
     margin-bottom: 0.5rem;
@@ -202,7 +209,7 @@ a {
 .footer-grid-container {
   margin-top: 5rem;
   display: grid;
-  grid-template: 1fr / 1fr 1fr 1fr;
+  grid-template: 1fr / minmax(0, 3fr) minmax(0, 2fr) minmax(0, 3fr);
 }
 
 
@@ -224,6 +231,9 @@ a {
 
 .footer-content {
   padding: 1rem 2rem 2rem;
+  @media (max-width: $mediaWidthBp1) {
+    padding: 1rem .5rem 1rem;
+  }
   i {
     font-size: 1em;
   }
@@ -234,7 +244,7 @@ a {
 
 .hours-grid-container {
   display: grid;
-  grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  grid-template: repeat(3, minmax(0, 1fr)) / repeat(2, minmax(0, 1fr));
   width: 20em;
   row-gap: .5em;
 }
