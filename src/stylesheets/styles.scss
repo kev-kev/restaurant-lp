@@ -17,6 +17,7 @@ $dark: #545454;
 $light: #656565;
 $bg-color: #d7cec7;
 $font-color: #76323f;
+$border-color: #76323f51;
 
 html {
   scroll-behavior: smooth;
@@ -120,10 +121,10 @@ h1 {
 }
 
 .divider {
-  border: none;
+  border: none; 
   background-color: $bg-color;
-  border-top: medium double #76323f51;
-  margin: 3rem 2rem;
+  border-top: medium double $border-color;
+  margin: 2rem;
   overflow: visible; /* For IE */
   text-align: center;
 }
@@ -145,12 +146,12 @@ h1 {
 .menu-grid-container {
   display: grid;
   grid-template: repeat(4, 1fr) 1rem / 1fr 1fr; // adding extra row to extend the dividing line
-  background:linear-gradient($font-color, $font-color) center 100% no-repeat; // draws line through center of element
-  background-size: 1px; // sets line size to 1px
+  background:linear-gradient($border-color, $border-color) center 100% no-repeat; // draws line through center of element
+  background-size: 2px; // sets line size to 1px
 }
 
 .menu-container {
-  margin: 2rem 0rem 5rem;
+  margin-top: 2rem;
   h2 {
     margin-bottom: 0.2rem;
   }
@@ -175,5 +176,36 @@ h1 {
   h2 {
     font-size: 1.3rem;
     font-style: italic;
+  }
+}
+
+.footer {
+  background-color: $bg-color;
+  padding: 3rem;
+  margin: 0;
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+  i {
+    font-size: 32px;
+  }
+}
+
+.footer-grid-container {
+  margin-top: 3rem;
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr;
+}
+
+
+.footer-grid-item {
+  border-right: 2px solid $border-color;
+
+  &:last-child {
+    border-right: 0;
+  }
+
+  p {
+    padding: 1rem;
   }
 }

@@ -77,4 +77,4 @@ const createMenuItems = () => {
 createMenuItems();
 $('#dinner-menu-container').hide();
 $('#drink-menu-container').hide();
-MicroModal.init();
+MicroModal.init({awaitCloseAnimation: true, awaitOpenAnimation: true});

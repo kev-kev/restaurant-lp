@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant LP</title>
-    <link rel="icon" href="./images/icon.ico" >
-    <meta name="description" content="" >
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Tajawal" rel="stylesheet" >
-    <script src="https://kit.fontawesome.com/52571830c3.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant LP</title>
+  <link rel="icon" href="./images/icon.ico" >
+  <meta name="description" content="" >
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display|Tajawal" rel="stylesheet" >
+  <script src="https://kit.fontawesome.com/52571830c3.js" crossorigin="anonymous"></script>
 </head>
 <body>              
     <header class="header">
@@ -38,27 +38,7 @@
         </div>
     </header>
     <main class="main">
-        <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
-            <div class="modal__overlay" tabindex="-1" data-micromodal-close>
-              <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-                <header class="modal__header">
-                  <h2 class="modal__title" id="modal-1-title">
-                    Micromodal
-                  </h2>
-                  <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
-                </header>
-                <main class="modal__content" id="modal-1-content">
-                  <p>
-                    Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also, <code>esc</code> to close modal.
-                  </p>
-                </main>
-                <footer class="modal__footer">
-                  <button class="modal__btn modal__btn-primary">Continue</button>
-                  <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
-                </footer>
-              </div>
-            </div>
-          </div>
+        
         <div class="carousel-container">
             <div class="carousel-placeholder"></div>
             <div class="owl-carousel owl-theme" data-aos="fade" data-aos-delay="300" data-aos-duration="1300">
@@ -93,17 +73,52 @@
                     <div id="drink-menu-container" class="menu-list-container"></div>
                 </div>
             </div>
-            <div id="hours-and-location" class="main-content-block" data-aos="fade" data-aos-delay="400" data-aos-offset="100" data-aos-duration="1300">
-                <hr class="divider"/>
-                <h1 class="main-content-title">Hours & Location</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sapien pellentesque habitant morbi tristique senectus et netus. Lectus sit amet est placerat in egestas erat imperdiet. Sed id semper risus in hendrerit gravida rutrum. Dictum non consectetur a erat nam at lectus urna. Faucibus ornare suspendisse sed nisi lacus sed viverra. Interdum velit euismod in pellentesque massa placerat duis ultricies. Magna sit amet purus gravida quis blandit. Cras semper auctor neque vitae tempus quam pellentesque. Facilisis sed odio morbi quis commodo odio aenean sed. Donec ultrices tincidunt arcu non.</p>
-                <p>Ultricies lacus sed turpis tincidunt id aliquet risus feugiat in. At erat pellentesque adipiscing commodo elit at imperdiet dui accumsan. Dui vivamus arcu felis bibendum ut. Quis viverra nibh cras pulvinar mattis nunc sed blandit libero. Mi bibendum neque egestas congue quisque egestas diam in arcu. Vel pharetra vel turpis nunc eget lorem dolor. Senectus et netus et malesuada fames ac turpis. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Malesuada nunc vel risus commodo viverra maecenas accumsan. Vitae et leo duis ut diam quam. Amet est placerat in egestas erat imperdiet sed euismod nisi. Id nibh tortor id aliquet lectus proin nibh nisl.</p>
-            </div>
         </div>
     </main>
-    <footer>
+    <footer class="footer main-content-container">
+      <div id="hours-and-location" class="main-content-block" data-aos="fade" data-aos-delay="400" data-aos-offset="100" data-aos-duration="1300">
+        <hr class="divider"/>
+        <h1 class="main-content-title">Hours & Location</h1>
+        <div class="footer-grid-container">
+          <div class="footer-grid-item">
+            <i class="fa-solid fa-clock"></i>
+            <h2>Hours</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          </div>
+          <div class="footer-grid-item">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <h2>Location</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          </div>
+          <div class="footer-grid-item">
+            <i class="fa-solid fa-phone"></i>
+            <h2>Contact</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+          </div>
+        </div>
+    </div>
 
     </footer>
-   
+    <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close></div>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal-1-title">
+              Micromodal
+          </h2>
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <main class="modal__content" id="modal-1-content">
+          <p>
+            Try hitting the <code>tab</code> key and notice how the focus stays within the modal itself. Also, <code>esc</code> to close modal.
+          </p>
+        </main>
+        <footer class="modal__footer">
+          <button class="modal__btn modal__btn-primary">Continue</button>
+          <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+        </footer>
+      </div>
+    </div>
+
 </body>
 </html>
