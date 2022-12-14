@@ -1,6 +1,6 @@
 // Load CSS Reset from NPM
 @import "~normalize.css";
-@import "./modal.css";
+@import "./modal.scss";
 
 @keyframes fadeInAnimation {
   0% {
@@ -132,7 +132,7 @@ a {
   border: none; 
   background-color: $bg-color;
   border-top: medium double $border-color;
-  margin: 2rem;
+  margin: 2rem 0rem;
   overflow: visible; /* For IE */
   text-align: center;
 }
@@ -189,6 +189,10 @@ a {
     font-size: 1.3rem;
     font-style: italic;
   }
+}
+
+.menu-list-container {
+  margin-top: 3.3rem;
 }
 
 .footer {
