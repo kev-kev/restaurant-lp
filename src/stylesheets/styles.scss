@@ -26,10 +26,11 @@ $mediaWidthBp3: 840px;
 html {
   scroll-behavior: smooth;
   font-family: Tajawal;
+  background-color: $bg-color;
 }
 
 .main {
-  background-color: $bg-color;
+
 }
 
 h1 {
@@ -112,9 +113,17 @@ a {
 
 .main-content-container {
   color: $font-color;
-  padding: 1rem;
   text-align: center;
-  margin: 0 11rem;
+  padding: 0 11rem;
+  @media(max-width: $mediaWidthBp1) {
+    padding: 0 6rem;
+  }
+  @media(max-width: $mediaWidthBp2) {
+    padding: 0 3rem;
+  }
+  @media(max-width: $mediaWidthBp3) {
+    padding: 0 1rem;
+  }
 }
 
 .main-content-block {
@@ -130,7 +139,6 @@ a {
 
 .divider {
   border: none; 
-  background-color: $bg-color;
   border-top: medium double $border-color;
   margin: 2rem 0rem;
   overflow: visible; /* For IE */
@@ -189,6 +197,7 @@ a {
     font-size: 1.3rem;
     font-style: italic;
   }
+  padding: 0 2rem;
 }
 
 .menu-list-container {
@@ -196,11 +205,6 @@ a {
 }
 
 .footer {
-  background-color: $bg-color;
-  padding: 1rem 11rem;
-  @media (max-width: $mediaWidthBp1) {
-    padding: 1rem 2rem;
-  }
   margin: 0;
   h2 {
     margin-bottom: 0.5rem;

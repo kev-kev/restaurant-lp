@@ -81,7 +81,6 @@ $('.menu-btn').on('click', (e) => {
   }
 })
 
-
 $('#dinner-menu-container').hide();
 $('#drink-menu-container').hide();
 
@@ -96,7 +95,7 @@ for(let i = 1; i <= MAX_TABLE_SIZE; i++) {
 let today = new Date(), dd = today.getDate(), mm = today.getMonth() + 1, yyyy = today.getFullYear(), endOfReservations = new Date();
 if (dd < 10) dd = '0' + dd;
 if (mm < 10) mm = '0' + mm;
-today = yyyy + '-' + mm + '-' + dd;
+today = yyyy + '-' + mm + '-' + dd; // formatting for html
 
 endOfReservations.setMonth(mm + RESERVATION_PD_IN_MONTHS);
 dd = endOfReservations.getDate();
