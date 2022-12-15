@@ -9,10 +9,11 @@ const LUNCH_MENU_ITEMS = 8;
 const DINNER_MENU_ITEMS = 8;
 const DRINK_MENU_ITEMS = 6;
 const MAX_TABLE_SIZE = 8;
+const RESERVATION_PD_IN_MONTHS = 1;
 
+// Init.
 $(() => {
   $('.owl-carousel').on('initialized.owl.carousel', () => {
-    console.log()
     $('.carousel-placeholder').hide();
   })
 
@@ -26,9 +27,40 @@ $(() => {
     touchDrag: false,
     mouseDrag: false,
   })
-
   AOS.init();
-});
+  
+  MicroModal.init({
+    awaitCloseAnimation: true,
+    awaitOpenAnimation: true
+  });
+})
+
+
+// Menu
+for(let i = 0; i < LUNCH_MENU_ITEMS; i++){
+  $('#lunch-menu-container').append(`
+    <div class="menu-grid-item">
+      <h2>Lunch Item</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  `)
+}
+for(let i = 0; i < DINNER_MENU_ITEMS; i++){
+  $('#dinner-menu-container').append(`
+    <div class="menu-grid-item">
+      <h2>Dinner Item</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  `)
+}
+for(let i = 0; i < DRINK_MENU_ITEMS; i++){
+  $('#drink-menu-container').append(`
+    <div class="menu-list-item">
+      <h2>Drink Item</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  `)
+}
 
 $('.menu-btn').on('click', (e) => {
   $('.menu-grid-container').hide();
@@ -49,35 +81,12 @@ $('.menu-btn').on('click', (e) => {
   }
 })
 
-const createMenuItems = () => {
-  for(let i = 0; i < LUNCH_MENU_ITEMS; i++){
-    $('#lunch-menu-container').append(`
-      <div class="menu-grid-item">
-        <h2>Lunch Item</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    `)
-  }
-  for(let i = 0; i < DINNER_MENU_ITEMS; i++){
-    $('#dinner-menu-container').append(`
-      <div class="menu-grid-item">
-        <h2>Dinner Item</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    `)
-  }
-  for(let i = 0; i < DRINK_MENU_ITEMS; i++){
-    $('#drink-menu-container').append(`
-      <div class="menu-list-item">
-        <h2>Drink Item</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-    `)
-  }
-}
 
-// Reservation form inputs
+$('#dinner-menu-container').hide();
+$('#drink-menu-container').hide();
 
+
+// Reservation form
 for(let i = 1; i <= MAX_TABLE_SIZE; i++) {
   $('#num-input').append(`
     <option value="${i}">${i}</option>
@@ -85,11 +94,11 @@ for(let i = 1; i <= MAX_TABLE_SIZE; i++) {
 }
 
 let today = new Date(), dd = today.getDate(), mm = today.getMonth() + 1, yyyy = today.getFullYear(), endOfReservations = new Date();
-endOfReservations.setMonth(mm + 1);
 if (dd < 10) dd = '0' + dd;
 if (mm < 10) mm = '0' + mm;
 today = yyyy + '-' + mm + '-' + dd;
 
+endOfReservations.setMonth(mm + RESERVATION_PD_IN_MONTHS);
 dd = endOfReservations.getDate();
 mm = endOfReservations.getMonth();
 yyyy = endOfReservations.getFullYear();
@@ -102,7 +111,5 @@ $('#date-input').attr({
   "max": endOfReservations
 });
 
-createMenuItems();
-$('#dinner-menu-container').hide();
-$('#drink-menu-container').hide();
-MicroModal.init({awaitCloseAnimation: true, awaitOpenAnimation: true});
+
+
