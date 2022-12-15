@@ -3,10 +3,12 @@ import 'aos/dist/aos.css';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
 import MicroModal from 'micromodal';
+import $ from 'jquery';
 
 const LUNCH_MENU_ITEMS = 8;
 const DINNER_MENU_ITEMS = 8;
 const DRINK_MENU_ITEMS = 6;
+const MAX_TABLE_SIZE = 8;
 
 $(() => {
   $('.owl-carousel').on('initialized.owl.carousel', () => {
@@ -73,6 +75,32 @@ const createMenuItems = () => {
     `)
   }
 }
+
+// Reservation form inputs
+
+for(let i = 1; i <= MAX_TABLE_SIZE; i++) {
+  $('#num-input').append(`
+    <option value="${i}">${i}</option>
+  `)
+}
+
+let today = new Date(), dd = today.getDate(), mm = today.getMonth() + 1, yyyy = today.getFullYear(), endOfReservations = new Date();
+endOfReservations.setMonth(mm + 1);
+if (dd < 10) dd = '0' + dd;
+if (mm < 10) mm = '0' + mm;
+today = yyyy + '-' + mm + '-' + dd;
+
+dd = endOfReservations.getDate();
+mm = endOfReservations.getMonth();
+yyyy = endOfReservations.getFullYear();
+if (dd < 10) dd = '0' + dd;
+if (mm < 10) mm = '0' + mm;
+endOfReservations = yyyy + '-' + mm + '-' + dd;
+
+$('#date-input').attr({
+  "min": today,
+  "max": endOfReservations
+});
 
 createMenuItems();
 $('#dinner-menu-container').hide();
