@@ -71,7 +71,12 @@ a {
   width: 100%;
   text-align: center;
   padding-top: 1rem;
-
+  a {
+    padding: 0 .25rem;
+  }
+  span {
+    font-size: 20px;
+  }
 }
 
 .vertical-line {
@@ -85,25 +90,16 @@ a {
   align-items: center;
 }
 
-.social-media-btns-container {
-  display: flex;
-  flex-wrap:wrap;
-  align-items: center;
-  justify-content: flex-start;
-  margin-left: 2rem;
-  color: $header-font-color;
-  i {
-    font-size: 32px;
-    padding-right: 1.5rem;
-  }
-}
+
 
 .header-title {
   grid-column-start: 2;
   text-align: center;
   display: inline;
   font-size: 60px;
-  margin: 0 0 0.5rem 0;
+  line-height: 60px;
+  padding-bottom: 1rem;
+  margin: 0;
 }
 
 .header-resBtn {
@@ -130,10 +126,10 @@ a {
   text-align: center;
   padding: 0 11rem;
   @media(max-width: $mediaWidthBp1) {
-    padding: 0 6rem;
+    padding: 0 4rem;
   }
   @media(max-width: $mediaWidthBp2) {
-    padding: 0 3rem;
+    padding: 0 2rem;
   }
   @media(max-width: $mediaWidthBp3) {
     padding: 0 1rem;
@@ -179,7 +175,7 @@ a {
 
 .menu-grid-container {
   display: grid;
-  grid-template: repeat(4, minmax(0, 1fr)) 1rem / repeat(2, minmax(0, 1fr)) ; // adding extra row to extend the dividing line
+  grid-template: repeat(4, minmax(0, 1fr)) 1rem / repeat(2, minmax(0, 1fr)) ; // adding extra row to extend the line
   background:linear-gradient($border-color, $border-color) center 100% no-repeat; // draws line through center of element
   background-size: 2px; // sets line size to 1px
 }
@@ -223,7 +219,6 @@ a {
 }
 
 .footer {
-  margin: 0;
   h2 {
     margin-bottom: 0.5rem;
   }
@@ -285,3 +280,29 @@ a {
   width: 20em;
   row-gap: .5em;
 }
+
+.footer-bottom-bar {
+  background-color: $header-bg;
+  width: 100%;
+  // padding: 1rem;
+  margin-top: 2rem;
+  a {
+    color: $header-font-color;
+  }
+}
+
+.social-media-btns-container {
+  padding: .75rem;
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 2rem;
+  color: $header-font-color;
+  i {
+    font-size: 32px;
+    padding-right: 1.5rem;
+  }
+}
+
+

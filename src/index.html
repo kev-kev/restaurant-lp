@@ -12,50 +12,31 @@
     <header class="header">
       <div class="desktop-header">
         <nav class="navbar">
-            <span>|</span>
-            <a href="#">Home</a>
-            <span>|</span>
+            <!-- <span>|</span> -->
             <a href="#about">About Us</a>
             <span>|</span>
             <a href="#menu">Menu</a>
             <span>|</span>
             <a href="#hours-and-location">Hours & Location</a>
-            <span>|</span>
+            <!-- <span>|</span> -->
         </nav>
         <div class="header-grid-container">
-            <div class="social-media-btns-container" >
-                <a href="mailto:kevin.clark93@gmail.com" target="_blank">
-                    <i class="fa-regular fa-envelope"></i>
-                </a>
-                <a href="https://kev-kev.github.io/portfolio" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://kev-kev.github.io/portfolio" target="_blank">
-                    <i class="fa-brands fa-yelp"></i>
-                </a>
-            </div>
             <h1 class="header-title">RESTAURANT LP</h1>
             <button class="btn header-resBtn" style="background-color: #4e4b5c;" data-micromodal-trigger="modal-1">RESERVATIONS</button>
         </div>
       </div>
+
+      <!-- create select under hamburger icon, change res btn to link,
+         move topnav & res links under select, position right (where res btn is on desktop) -->
       <div class="mobile-header">
         <div class="header-grid-container">
-            <div class="social-media-btns-container" >
-                <a href="mailto:kevin.clark93@gmail.com" target="_blank">
-                    <i class="fa-regular fa-envelope"></i>
-                </a>
-                <a href="https://kev-kev.github.io/portfolio" target="_blank">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://kev-kev.github.io/portfolio" target="_blank">
-                    <i class="fa-brands fa-yelp"></i>
-                </a>
-            </div>
+            
             <h1 class="header-title">RESTAURANT LP</h1>
             <button class="btn header-resBtn" style="background-color: #4e4b5c;" data-micromodal-trigger="modal-1">RESERVATIONS</button>
         </div>
       </div>
     </header>
+
     <main class="main">
         <div class="carousel-container">
             <div class="carousel-placeholder"></div>
@@ -65,6 +46,7 @@
                 <img src="./images/spaghetti.jpg" class="carousel-img" />
             </div>
         </div>
+
         <div class="main-content-container">
             <div id="about" class="main-content-block" data-aos="fade" data-aos-delay="400" data-aos-offset="150" data-aos-duration="1300">
                 <h1 class="main-content-title">About Us</h1>
@@ -93,46 +75,63 @@
             </div>
         </div>
     </main>
-    <footer class="footer main-content-container">
+
+    <footer class="footer">
       <div id="hours-and-location" class="main-content-block" data-aos="fade" data-aos-delay="400" data-aos-offset="50" data-aos-duration="1300">
-        <hr class="divider"/>
-        <div class="footer-grid-container">
-          <div class="footer-grid-item">
-            <i class="fa-solid fa-clock"></i>
-            <h1>Hours</h1>
-            <div class="footer-content">
-              <div class="hours-grid-container">
-                <span class="hours-grid-item">Tuesday - Thursday</span>
-                <span class="hours-grid-item">5:30pm - 10:00pm</span>
-                <span class="hours-grid-item">Friday - Saturday</span>
-                <span class="hours-grid-item">5:30pm - 11:00pm</span>
-                <span class="hours-grid-item">Sunday - Monday</span>
-                <span class="hours-grid-item">Closed</span>
+        <div class="main-content-container">
+          <hr class="divider"/>
+          <div class="footer-grid-container">
+            <div class="footer-grid-item">
+              <i class="fa-solid fa-clock"></i>
+              <h1>Hours</h1>
+              <div class="footer-content">
+                <div class="hours-grid-container">
+                  <span class="hours-grid-item">Tuesday - Thursday</span>
+                  <span class="hours-grid-item">5:30pm - 10:00pm</span>
+                  <span class="hours-grid-item">Friday - Saturday</span>
+                  <span class="hours-grid-item">5:30pm - 11:00pm</span>
+                  <span class="hours-grid-item">Sunday - Monday</span>
+                  <span class="hours-grid-item">Closed</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="footer-grid-item">
-            <i class="fa-solid fa-phone"></i>
-            <h1>Contact</h1>
-            <div class="footer-content">
-              <p>212-555-0900</p>
-              <a href="mailto:kevin.clark93@gmail.com" target="_blank">
-                <p>restaurantLP@gmail.com</p>
-              </a>
+            <div class="footer-grid-item">
+              <i class="fa-solid fa-phone"></i>
+              <h1>Contact</h1>
+              <div class="footer-content">
+                <p>212-555-0900</p>
+                <a href="mailto:kevin.clark93@gmail.com" target="_blank">
+                  <p>restaurantLP@gmail.com</p>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="footer-grid-item">
-            <i class="fa-solid fa-map-location-dot"></i>
-            <h1>Location</h1>
-            <div class="footer-content">
-              <p>285 Fulton St, New York, NY 10007</p>
-              <a href="https://goo.gl/maps/8itbZqeyXkfnuNwh7" target="_blank"><p style="font-style: italic;">Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></p></a>
+            <div class="footer-grid-item">
+              <i class="fa-solid fa-map-location-dot"></i>
+              <h1>Location</h1>
+              <div class="footer-content">
+                <p>285 Fulton St, New York, NY 10007</p>
+                <a href="https://goo.gl/maps/8itbZqeyXkfnuNwh7" target="_blank"><p style="font-style: italic;">Open in Google Maps <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></p></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="footer-bottom-bar">
+      <div class="social-media-btns-container" >
+        <a href="mailto:kevin.clark93@gmail.com" target="_blank">
+            <i class="fa-regular fa-envelope"></i>
+        </a>
+        <a href="https://kev-kev.github.io/portfolio" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://kev-kev.github.io/portfolio" target="_blank">
+            <i class="fa-brands fa-yelp"></i>
+        </a>
+    </div>
+    </div>
     </footer>
+
     <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
       <div class="modal__overlay" tabindex="-1" data-micromodal-close></div>
       <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
@@ -158,6 +157,5 @@
         </footer>
       </div>
     </div>
-
 </body>
 </html>
