@@ -22,6 +22,7 @@ $border-color: #76323f51;
 $mediaWidthBp1: 1260px;
 $mediaWidthBp2: 960px;
 $mediaWidthBp3: 840px;
+$test: $mediaWidthBp2 + 1px;
 
 html {
   scroll-behavior: smooth;
@@ -111,6 +112,19 @@ a {
   width: 8rem;
 }
 
+.desktop-header {
+  @media (max-width: $mediaWidthBp2) {
+    display: none;
+  }
+}
+
+.mobile-header {
+  display: none;
+  @media (max-width: $mediaWidthBp2) {
+    display: block;
+  }
+}
+
 .main-content-container {
   color: $font-color;
   text-align: center;
@@ -157,6 +171,10 @@ a {
 
 .carousel-placeholder {
   height: 100vh;
+}
+
+.about-p {
+  padding: 0rem 1rem;
 }
 
 .menu-grid-container {
