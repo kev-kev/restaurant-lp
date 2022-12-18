@@ -133,16 +133,17 @@ a {
 .hamburger-menu {
   display: none;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   position: absolute;
   background-color: $header-bg;
-  height: 100vh;
+  height: 92vh;
   width: 100vw;
   z-index: 2;
   align-items: center;
   a {
     font-family: "Playfair Display", Garamond, "Times New Roman";
     font-size: 24px;
+    padding-bottom: 3rem;
   }
 }
 
