@@ -36,7 +36,9 @@ $(() => {
 })
 
 // Hamburger
-$('.fa-bars').on('click', () => {
+$('.hamburger-menu-icon').on('click', () => {
+  $('.hamburger-menu-icon').toggleClass('fa-bars');
+  $('.hamburger-menu-icon').toggleClass('fa-xmark');
   const hamburgerMenu = $('.hamburger-menu');
   if(hamburgerMenu.css("display") === "flex"){
     hamburgerMenu.css("display", "none");
@@ -45,6 +47,13 @@ $('.fa-bars').on('click', () => {
     hamburgerMenu.css("display", "flex");
     $('body').css("overflowY", "hidden");
   } 
+})
+
+$('.hamburger-menu a').on('click', () => {
+  $('.hamburger-menu-icon').addClass('fa-bars');
+  $('.hamburger-menu-icon').removeClass('fa-xmark');
+  $('.hamburger-menu').css("display", "none");
+  $('body').css("overflowY", "visible");
 })
 
 // Menu

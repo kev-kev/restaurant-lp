@@ -137,10 +137,14 @@ a {
   width: 100vw;
   z-index: 2;
   align-items: center;
+  a {
+    font-family: "Playfair Display", Garamond, "Times New Roman";
+    font-size: 24px;
+  }
 }
 
 
-.fa-bars {
+.hamburger-menu-icon {
   margin-right: 2rem;
   font-size: 26px;
 }
