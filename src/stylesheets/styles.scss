@@ -53,10 +53,13 @@ a {
   color: rgba(255, 255, 255, 0.83);
   cursor: pointer;
   font-weight: bolder;
+  transition: background-color 0.4s;
+}
+
+.btn-hover-light {
   &:hover {
     background-color: $light !important;
   }
-  transition: background-color 0.4s;
 }
 
 .header {
