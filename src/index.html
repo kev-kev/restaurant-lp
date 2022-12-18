@@ -12,13 +12,11 @@
     <header class="header">
       <div class="desktop-header">
         <nav class="navbar">
-            <!-- <span>|</span> -->
             <a href="#about">About Us</a>
             <span>|</span>
             <a href="#menu">Menu</a>
             <span>|</span>
             <a href="#hours-and-location">Hours & Location</a>
-            <!-- <span>|</span> -->
         </nav>
         <div class="header-grid-container">
             <h1 class="header-title">RESTAURANT LP</h1>
@@ -29,10 +27,15 @@
       <!-- create select under hamburger icon, change res btn to link,
          move topnav & res links under select, position right (where res btn is on desktop) -->
       <div class="mobile-header">
-        <div class="header-grid-container">
-            
-            <h1 class="header-title">RESTAURANT LP</h1>
-            <button class="btn header-resBtn" style="background-color: #4e4b5c;" data-micromodal-trigger="modal-1">RESERVATIONS</button>
+        <div class="header-grid-container">            
+          <h1 class="header-title">RESTAURANT LP</h1>
+          <a><i class="fa-solid fa-bars"></i></a> 
+        </div>
+        <div class="hamburger-menu">
+          <a href="#about">About Us</a>
+          <a href="#menu">Menu</a>
+          <a href="#hours-and-location">Hours & Location</a>
+          <!-- <a data-micromodal-trigger="modal-1">Reservations</button> -->
         </div>
       </div>
     </header>
@@ -137,12 +140,12 @@
       <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
         <header class="modal__header">
           <h2 class="modal__title" id="modal-1-title">
-              Reserve a table
+              RESERVATIONS
           </h2>
           <!-- <button class="modal__close" aria-label="Close modal" data-micromodal-close></button> -->
         </header>
         <main class="modal__content" id="modal-1-content">
-          <form>
+          <form class="modal__form">
             <label for="num-input">Number of People</label><br/>
             <select id="num-input" class="modal-form-input"></select><br/>
             <label for="date-input">Date</label><br/>
@@ -153,7 +156,6 @@
         </main>
         <footer class="modal__footer">
           <button class="modal__btn modal__btn-primary">RESERVE</button>
-          <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
         </footer>
       </div>
     </div>

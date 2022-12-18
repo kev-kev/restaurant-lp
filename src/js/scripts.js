@@ -35,6 +35,17 @@ $(() => {
   });
 })
 
+// Hamburger
+$('.fa-bars').on('click', () => {
+  const hamburgerMenu = $('.hamburger-menu');
+  if(hamburgerMenu.css("display") === "flex"){
+    hamburgerMenu.css("display", "none");
+    $('body').css("overflowY", "visible");
+  } else {
+    hamburgerMenu.css("display", "flex");
+    $('body').css("overflowY", "hidden");
+  } 
+})
 
 // Menu
 for(let i = 0; i < LUNCH_MENU_ITEMS; i++){
