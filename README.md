@@ -1,6 +1,6 @@
 # Restaurant LP
 
-Welcome to Restaurant LP! This is a single page application (SPA) that serves as a landing page for a fictional restaurant.
+Welcome to Restaurant LP! This is a site that serves as a landing page for a fictional restaurant.
 
 ## Features
 
