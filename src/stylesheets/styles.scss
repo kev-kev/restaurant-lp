@@ -40,7 +40,7 @@ h1 {
 
 a {
   text-decoration: none;
-  &:hover {
+  &:hover, &:focus {
     text-decoration: underline;
     cursor: pointer;
   }
@@ -57,7 +57,7 @@ a {
 }
 
 .btn-hover-light {
-  &:hover {
+  &:hover, &:focus {
     background-color: $light !important;
   }
 }
@@ -136,6 +136,7 @@ a {
   @media (max-width: $mediaWidthBp2) {
     display: block;
   }
+  padding-top: .25rem;
 }
 
 .hamburger-menu {
@@ -144,7 +145,7 @@ a {
   justify-content: center;
   position: absolute;
   background-color: $header-bg;
-  height: 92vh;
+  height: 95vh;
   width: 100vw;
   z-index: 2;
   align-items: center;
@@ -153,6 +154,7 @@ a {
     font-size: 24px;
     padding-bottom: 3rem;
   }
+  animation: fadeInAnimation .2s;
 }
 
 

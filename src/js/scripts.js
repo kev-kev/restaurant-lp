@@ -35,7 +35,7 @@ $(() => {
   });
 })
 
-// Hamburger
+// Hamburger menu
 $('.hamburger-menu-icon').on('click', () => {
   $('.hamburger-menu-icon').toggleClass('fa-bars');
   $('.hamburger-menu-icon').toggleClass('fa-xmark');
