@@ -1,29 +1,14 @@
 {
-  "name": "restaurant-landing-page",
+  "name": "restaurant-lp",
   "description": "A modern landing page for an example restaurant",
-  "version": "1.1.0",
+  "version": "1.0",
   "author": {
     "name": "Kevin Clark"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ericalli/static-site-boilerplate.git"
+    "url": "git+https://github.com/kev-kev/restaurant-lp.git"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ericalli/static-site-boilerplate/issues"
-  },
-  "keywords": [
-    "html5",
-    "css3",
-    "es6",
-    "frontend",
-    "sass",
-    "less",
-    "static",
-    "boilerplate",
-    "webpack"
-  ],
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --config ./config/webpack.config.js",
     "start:dist": "cross-env NODE_ENV=production webpack-dev-server --config ./config/webpack.config.js && http-server ./dist -o",
@@ -74,13 +59,16 @@
     "webpackbar": "^4.0.0"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "chalk": "^2.4.2",
     "clear": "^0.1.0",
     "enquirer": "^2.3.6",
     "figlet": "^1.2.3",
     "ftp-deploy": "^2.4.1",
     "jquery": "^3.6.0",
+    "micromodal": "^0.4.10",
     "normalize.css": "^8.0.1",
+    "owl.carousel": "^2.3.4",
     "reset-css": "^5.0.1",
     "sanitize.css": "^12.0.0",
     "webpack-dev-server": "^3.11.2"
