@@ -39,5 +39,5 @@ module.exports = {
       'window.jQuery': 'jquery'
     }),
     ...plugins,
-  ],
+  ]
 };
