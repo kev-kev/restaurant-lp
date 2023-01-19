@@ -24,3 +24,6 @@ To get started with this project, follow these steps:
 `npm start`
 
 The development server will start up and the landing page will be available at http://localhost:3000/.
+
+<hr/>
+<img src="./src/images/screenshot.png" width="800px"/>
